@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lullabies by Divya - Professional Baby Photography</title>
+    <meta name="description" content="Capturing precious moments - Professional baby photography services by certified photographer Divya. Creating beautiful memories that last a lifetime.">
+    <meta name="keywords" content="baby photography, newborn photos, infant photography, maternity photos, family portraits, professional photographer">
+    
+    <!-- Google Analytics -->
+    <!-- Replace GA_MEASUREMENT_ID with your actual Google Analytics 4 tracking ID (G-XXXXXXXXXX) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        // Main configuration - replace GA_MEASUREMENT_ID with your actual tracking ID
+        gtag('config', 'GA_MEASUREMENT_ID', {
+            page_title: 'Lullabies by Divya - Professional Baby Photography',
+            page_location: window.location.href,
+            custom_map: {
+                'custom_parameter_1': 'photography_website'
+            }
+        });
+        
+        // Track page views with custom parameters
+        gtag('event', 'page_view', {
+            page_title: document.title,
+            page_location: window.location.href,
+            content_group1: 'Photography Portfolio',
+            content_group2: 'Baby Photography'
+        });
+        
+        // Track scroll depth for engagement
+        let scrollTracked = false;
+        window.addEventListener('scroll', () => {
+            if (!scrollTracked && window.scrollY > document.body.scrollHeight * 0.75) {
+                gtag('event', 'scroll', {
+                    event_category: 'engagement',
+                    event_label: '75_percent_scroll',
+                    value: 75
+                });
+                scrollTracked = true;
+            }
+        });
+        
+        // Track time on site
+        let timeOnSite = 0;
+        setInterval(() => {
+            timeOnSite += 30;
+            if (timeOnSite === 30 || timeOnSite === 60 || timeOnSite === 120) {
+                gtag('event', 'timing_complete', {
+                    name: 'time_on_site',
+                    value: timeOnSite
+                });
+            }
+        }, 30000);
+    </script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Lullabies by Divya</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#gallery" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Capturing Life's Most Precious Moments</h1>
+            <p class="hero-subtitle">Professional baby photography that tells your unique story</p>
+            <div class="hero-buttons">
+                <a href="#gallery" class="btn btn-primary">View Gallery</a>
+                <a href="#contact" class="btn btn-secondary">Book Session</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=600&h=800&fit=crop&crop=center" alt="Beautiful baby photography" loading="lazy">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Divya</h2>
+                    <h3>Certified Professional Photographer</h3>
+                    <p>Welcome to Lullabies by Divya! I'm a certified professional photographer specializing in capturing the tender, fleeting moments of your little ones. With years of experience and a gentle approach, I create timeless portraits that you'll treasure forever.</p>
+                    
+                    <div class="credentials">
+                        <div class="credential-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>Certified Professional Photographer</span>
+                        </div>
+                        <div class="credential-item">
+                            <i class="fas fa-baby"></i>
+                            <span>Specialized in Baby & Newborn Photography</span>
+                        </div>
+                        <div class="credential-item">
+                            <i class="fas fa-heart"></i>
+                            <span>Gentle, Patient Approach with Little Ones</span>
+                        </div>
+                    </div>
+                    
+                    <blockquote>
+                        "Every baby is a blessing, and every moment is precious. My goal is to capture the pure joy and innocence that makes your heart sing."
+                    </blockquote>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=500&h=600&fit=crop&crop=center" alt="Photographer Divya with camera" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Portfolio</h2>
+            <p class="section-subtitle">A glimpse into the beautiful moments I've captured</p>
+            
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="newborn">Newborn</button>
+                <button class="filter-btn" data-filter="baby">Baby</button>
+                <button class="filter-btn" data-filter="family">Family</button>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="newborn">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop&crop=center" alt="Newborn photography" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="baby">
+                    <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=400&h=400&fit=crop&crop=center" alt="Baby photography" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="family">
+                    <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=400&h=400&fit=crop&crop=center" alt="Family photography" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="newborn">
+                    <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=400&h=400&fit=crop&crop=center" alt="Newborn session" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="baby">
+                    <img src="https://images.unsplash.com/photo-1566004100631-35d015d6a491?w=400&h=400&fit=crop&crop=center" alt="Baby portrait" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="family">
+                    <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=400&h=400&fit=crop&crop=center" alt="Family portrait" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Photography Services</h2>
+            <p class="section-subtitle">Professional photography packages tailored to your needs</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3>Newborn Sessions</h3>
+                    <p>Gentle, safe photography for babies 0-3 weeks old. Capturing those precious first days in a warm, comfortable environment.</p>
+                    <ul class="service-features">
+                        <li>2-3 hour session</li>
+                        <li>Multiple setups & props</li>
+                        <li>20+ edited photos</li>
+                        <li>Online gallery</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card featured">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Baby Milestones</h3>
+                    <p>Document your baby's growth journey - sitting up, crawling, first birthday, and all the special moments in between.</p>
+                    <ul class="service-features">
+                        <li>1-2 hour session</li>
+                        <li>Age-appropriate themes</li>
+                        <li>15+ edited photos</li>
+                        <li>Print release included</li>
+                    </ul>
+                    <div class="popular-badge">Most Popular</div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Family Portraits</h3>
+                    <p>Beautiful family portraits that include your little ones. Perfect for holiday cards and family keepsakes.</p>
+                    <ul class="service-features">
+                        <li>1 hour session</li>
+                        <li>Multiple family groupings</li>
+                        <li>12+ edited photos</li>
+                        <li>Location flexibility</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Create Beautiful Memories</h2>
+            <p class="section-subtitle">Ready to book your session? Get in touch!</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>hello@lullabiesbydivya.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Your City, State</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <select id="service" name="service" required>
+                            <option value="">Select Service</option>
+                            <option value="newborn">Newborn Session</option>
+                            <option value="baby">Baby Milestones</option>
+                            <option value="family">Family Portrait</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Tell me about your vision..." rows="5"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Lullabies by Divya. All rights reserved.</p>
+                    <p>Professional baby photography services</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-nav">
+            <button class="lightbox-prev">&#10094;</button>
+            <button class="lightbox-next">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
