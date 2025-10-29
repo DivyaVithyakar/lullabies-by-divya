@@ -43,13 +43,12 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(26, 26, 46, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
     transition: all 0.3s ease;
-    box-shadow: var(--shadow-light);
-    border-bottom: 4px solid;
-    border-image: var(--gradient-rainbow) 1;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    border-bottom: 3px solid rgba(139, 92, 246, 0.5);
 }
 
 .nav-container {
@@ -66,26 +65,13 @@ body {
     font-weight: 600;
     font-size: 2.8rem;
     color: white;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease;
-    letter-spacing: 2px;
-    animation: glow-pulse 3s ease-in-out infinite;
-}
-
-@keyframes glow-pulse {
-    0%, 100% { 
-        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
-        transform: scale(1);
-    }
-    50% { 
-        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 255, 255, 0.5), 0 0 40px rgba(139, 92, 246, 0.3);
-        transform: scale(1.02);
-    }
+    letter-spacing: 1px;
 }
 
 .nav-logo h2:hover {
-    transform: rotate(0deg) scale(1.05);
-    animation: bounce-rainbow 0.8s ease;
+    transform: scale(1.02);
 }
 
 /* Rainbow Text Effect */
@@ -152,7 +138,7 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: var(--text-dark);
+    color: white;
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
@@ -186,7 +172,7 @@ body {
 .bar {
     width: 25px;
     height: 3px;
-    background-color: var(--text-dark);
+    background-color: white;
     margin: 3px 0;
     transition: 0.3s;
 }
@@ -375,14 +361,15 @@ body {
 
 /* Section Styles */
 .section-title {
-    font-family: 'Dancing Script', cursive;
-    font-size: 3.5rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.8rem;
     text-align: center;
     margin-bottom: 1rem;
     color: var(--text-dark);
-    font-weight: 600;
-    text-shadow: 2px 2px 4px rgba(139, 92, 246, 0.15);
-    letter-spacing: 1px;
+    font-weight: 700;
+    font-style: italic;
+    text-shadow: 1px 1px 2px rgba(139, 92, 246, 0.1);
+    letter-spacing: 0.5px;
 }
 
 .section-subtitle {
@@ -494,38 +481,17 @@ body {
 }
 
 blockquote {
-    font-family: 'Dancing Script', cursive;
-    font-style: normal;
-    font-size: 1.4rem;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-size: 1.1rem;
     color: var(--primary-color);
     border-left: 4px solid var(--primary-color);
     padding: 1.5rem 2rem;
     margin: 3rem 0;
     background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, rgba(78, 205, 196, 0.05) 100%);
     border-radius: 10px;
-    position: relative;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.6;
-}
-
-blockquote::before {
-    content: '"';
-    font-size: 3rem;
-    color: var(--primary-color);
-    position: absolute;
-    top: -10px;
-    left: 10px;
-    font-family: 'Dancing Script', cursive;
-}
-
-blockquote::after {
-    content: '"';
-    font-size: 3rem;
-    color: var(--primary-color);
-    position: absolute;
-    bottom: -20px;
-    right: 20px;
-    font-family: 'Dancing Script', cursive;
 }
 
 .about-image {
@@ -750,10 +716,11 @@ blockquote::after {
 }
 
 .service-card h3 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.8rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
-    font-weight: 500;
+    font-weight: 600;
+    font-style: italic;
     text-shadow: 1px 1px 2px rgba(139, 92, 246, 0.1);
     letter-spacing: 0.5px;
 }
@@ -998,11 +965,11 @@ blockquote::after {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background-color: var(--white);
+        background-color: rgba(26, 26, 46, 0.98);
         width: 100%;
         text-align: center;
         transition: 0.3s;
-        box-shadow: var(--shadow);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
         padding: 2rem 0;
     }
 
